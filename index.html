@@ -1,57 +1,1825 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Sparkle Clean Co - Professional pest control services in Calhoun, GA and surrounding areas. Professional Cleaning in Calhoun, GA. Call 706-555-0187 for a free inspection.">
+  <meta name="description" content="Sparkle Clean Co - Professional Cleaning in Calhoun, GA and surrounding areas. Professional Cleaning in Calhoun, GA. Call 706-555-0187 for a free estimate.">
   <meta name="keywords" content="cleaning Calhoun GA, cleaning near me, best cleaning Calhoun">
-  <meta property="og:title" content="Sparkle Clean Co | Professional Pest Control Services">
-  <meta property="og:description" content="Professional Cleaning in Calhoun, GA. Trusted pest control experts serving Calhoun, GA and surrounding areas.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sparkle Clean Co | Professional Cleaning in Calhoun, GA">
+  <meta property="og:description" content="Professional Cleaning in Calhoun, GA. Calhoun's Most Trusted Cleaning Team serving Calhoun, GA and surrounding areas.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://forge-dev-studio.github.io/demo-sparkle-clean-co">
+  <meta property="og:image" content="https://forge-dev-studio.github.io/demo-sparkle-clean-co/assets/images/hero.png">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <title>Sparkle Clean Co | Professional Pest Control Services in Calhoun, GA and surrounding areas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+/* ============================================
+   PRESSURE WASHING - DESIGN SYSTEM
+   Premium, Conversion-Focused Website Template
+   ============================================ */
+
+/* ==========================================
+   CSS VARIABLES - DESIGN TOKENS
+   ========================================== */
+:root {
+  /* Brand Colors - Nature Inspired */
+  --color-primary: #0288D1;
+  --color-primary-dark: #01579B;
+  --color-primary-light: #03A9F4;
+  --color-secondary: #37474F;
+  --color-secondary-light: #546E7A;
+  --color-accent: #F4A020;
+  --color-accent-light: #FB8C00;
+
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-off-white: #F8F9F5;
+  --color-light-gray: #E8EBE4;
+  --color-medium-gray: #6B7B6E;
+  --color-dark-gray: #3A4A3C;
+  --color-black: #1A1F1A;
+
+  /* Semantic Colors */
+  --color-success: #28A745;
+  --color-warning: #F4A020;
+  --color-error: #DC3545;
+  --color-info: #17A2B8;
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Inter', sans-serif;
+
+  /* Font Sizes - Mobile First */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* Font Weights */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 20px rgba(45, 90, 39, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Z-Index Scale */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+
+  /* Container Widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1400px;
+}
+
+/* ==========================================
+   CSS RESET & BASE STYLES
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  line-height: var(--leading-normal);
+  color: var(--color-dark-gray);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-black);
+}
+
+h1 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+h4 {
+  font-size: var(--text-lg);
+}
+
+p {
+  margin-bottom: var(--space-4);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==========================================
+   LAYOUT & CONTAINER
+   ========================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.section {
+  padding: var(--space-16) 0;
+}
+
+.section--sm {
+  padding: var(--space-10) 0;
+}
+
+.section--lg {
+  padding: var(--space-24) 0;
+}
+
+.section--dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.section--light {
+  background-color: var(--color-off-white);
+}
+
+.section--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Flexbox Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 { gap: var(--space-2); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+
+/* ==========================================
+   HEADER & NAVIGATION
+   ========================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  gap: var(--space-4);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+}
+
+.header__logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Desktop Navigation */
+.nav {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav__link {
+  display: block;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-dark-gray);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.nav__link:hover,
+.nav__link.active {
+  color: var(--color-primary);
+  background-color: rgba(45, 90, 39, 0.08);
+}
+
+/* Header Actions */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.header__phone {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+}
+
+.header__review-link {
+  display: none;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.header__review-link:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  padding: var(--space-2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle__bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-dark-gray);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.menu-toggle.active .menu-toggle__bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .menu-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .menu-toggle__bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-white);
+  padding: var(--space-6);
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+  overflow-y: auto;
+  z-index: var(--z-fixed);
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+.mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mobile-nav__link {
+  display: block;
+  padding: var(--space-4);
+  font-size: var(--text-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-dark-gray);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.mobile-nav__link:hover,
+.mobile-nav__link.active {
+  color: var(--color-primary);
+  background-color: rgba(45, 90, 39, 0.08);
+}
+
+.mobile-nav__cta {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-light-gray);
+}
+
+.mobile-nav__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.mobile-nav__phone,
+.mobile-nav__text {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  font-weight: var(--font-semibold);
+  background-color: var(--color-off-white);
+  border-radius: var(--radius-lg);
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  text-align: center;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md), 0 4px 14px rgba(45, 90, 39, 0.3);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 6px 20px rgba(45, 90, 39, 0.4);
+}
+
+.btn--secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--accent {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+}
+
+.btn--accent:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 6px 20px rgba(244, 160, 32, 0.4);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.btn--lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-lg);
+}
+
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.btn--icon {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(72px + var(--space-12));
+  padding-bottom: var(--space-12);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+}
+
+.hero__title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-white);
+  margin-bottom: var(--space-6);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero__subtitle {
+  font-size: var(--text-lg);
+  max-width: 600px;
+  margin: 0 auto var(--space-8);
+  opacity: 0.95;
+  line-height: var(--leading-relaxed);
+}
+
+.hero__cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-6);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero__trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  opacity: 0.9;
+}
+
+.hero__trust-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ==========================================
+   CARDS
+   ========================================== */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card--bordered {
+  border: 1px solid var(--color-light-gray);
+  box-shadow: none;
+}
+
+.card--bordered:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+.card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-4);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-lg);
+  color: var(--color-white);
+}
+
+.card__icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.card__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+}
+
+.card__text {
+  color: var(--color-medium-gray);
+  margin-bottom: var(--space-4);
+}
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary);
+  transition: gap var(--transition-fast);
+}
+
+.card__link:hover {
+  gap: var(--space-3);
+}
+
+/* Service Card */
+.service-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card__image {
+  height: 200px;
+  margin: calc(var(--space-6) * -1);
+  margin-bottom: var(--space-4);
+  background-color: var(--color-light-gray);
+  background-size: cover;
+  background-position: center;
+}
+
+.service-card__content {
+  padding-top: var(--space-4);
+}
+
+/* ==========================================
+   SECTION HEADERS
+   ========================================== */
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+}
+
+.section-header__label {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.section-header__title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.section-header__text {
+  font-size: var(--text-lg);
+  color: var(--color-medium-gray);
+}
+
+.section-header--left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.section-header--light .section-header__title {
+  color: var(--color-white);
+}
+
+.section-header--light .section-header__text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ==========================================
+   TRUST & CREDIBILITY
+   ========================================== */
+.trust-bar {
+  background: var(--color-off-white);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.trust-bar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-dark-gray);
+}
+
+.trust-item__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.stat {
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.stat__number {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-white);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.stat__label {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   PROCESS SECTION
+   ========================================== */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.process-step {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+.process-step__number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-full);
+}
+
+.process-step__content {
+  flex: 1;
+}
+
+.process-step__title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.process-step__text {
+  color: var(--color-medium-gray);
+}
+
+/* ==========================================
+   GALLERY GRID
+   ========================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-light-gray);
+}
+
+.gallery-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover .gallery-item__image {
+  transform: scale(1.05);
+}
+
+.gallery-item__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-4);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  color: var(--color-white);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition-base);
+}
+
+.gallery-item:hover .gallery-item__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-item__caption {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+/* ==========================================
+   FAQ ACCORDION
+   ========================================== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.faq-item {
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.faq-item__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-5);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  text-align: left;
+  background: var(--color-white);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.faq-item__question:hover {
+  background: var(--color-off-white);
+}
+
+.faq-item__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+  transition: transform var(--transition-fast);
+}
+
+.faq-item.active .faq-item__icon {
+  transform: rotate(180deg);
+}
+
+.faq-item__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+}
+
+.faq-item.active .faq-item__answer {
+  max-height: 500px;
+}
+
+.faq-item__answer-inner {
+  padding: 0 var(--space-5) var(--space-5);
+  color: var(--color-medium-gray);
+}
+
+/* ==========================================
+   FORMS & EMBEDS
+   ========================================== */
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-2);
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-base);
+  border: 2px solid var(--color-light-gray);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-fast);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* GHL Embed Placeholder */
+.ghl-embed-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: var(--space-8);
+  background: linear-gradient(135deg, var(--color-off-white) 0%, var(--color-light-gray) 100%);
+  border: 3px dashed var(--color-medium-gray);
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.ghl-embed-placeholder__icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-4);
+  color: var(--color-medium-gray);
+}
+
+.ghl-embed-placeholder__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-dark-gray);
+  margin-bottom: var(--space-2);
+}
+
+.ghl-embed-placeholder__text {
+  color: var(--color-medium-gray);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: var(--space-16) 0 var(--space-8);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  margin-bottom: var(--space-10);
+}
+
+.footer__brand {
+  max-width: 300px;
+}
+
+.footer__logo {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.footer__text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-6);
+}
+
+.footer__social {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.footer__social-link:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.footer__column-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-5);
+  color: var(--color-white);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer__link:hover {
+  color: var(--color-accent);
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+
+.footer__contact-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary-light);
+}
+
+.footer__review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-black);
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.footer__review-btn:hover {
+  background: var(--color-accent-light);
+  transform: translateY(-2px);
+}
+
+.footer__bottom {
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--text-sm);
+}
+
+.footer__legal {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+}
+
+.footer__legal-link {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--text-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer__legal-link:hover {
+  color: var(--color-white);
+}
+
+/* ==========================================
+   STICKY MOBILE CTA BAR
+   ========================================== */
+.mobile-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  display: flex;
+  background: var(--color-white);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  padding: var(--space-3);
+  gap: var(--space-2);
+}
+
+.mobile-cta-bar__btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.mobile-cta-bar__btn--call {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.mobile-cta-bar__btn--text {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.mobile-cta-bar__btn--book {
+  background: var(--color-accent);
+  color: var(--color-black);
+}
+
+.mobile-cta-bar__btn:active {
+  transform: scale(0.98);
+}
+
+.mobile-cta-bar__icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Add padding to body for mobile CTA bar */
+body {
+  padding-bottom: 85px;
+}
+
+/* ==========================================
+   PAGE-SPECIFIC STYLES
+   ========================================== */
+
+/* Service Page Hero */
+.service-hero {
+  padding-top: calc(72px + var(--space-16));
+  padding-bottom: var(--space-16);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: var(--color-white);
+}
+
+.service-hero__content {
+  max-width: 700px;
+}
+
+.service-hero__title {
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.service-hero__text {
+  font-size: var(--text-lg);
+  opacity: 0.9;
+  margin-bottom: var(--space-6);
+}
+
+/* Pricing Section */
+.pricing-note {
+  background: var(--color-off-white);
+  border-left: 4px solid var(--color-primary);
+  padding: var(--space-6);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.pricing-note__title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.pricing-note__text {
+  color: var(--color-medium-gray);
+  margin-bottom: 0;
+}
+
+/* What's Included List */
+.included-list {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.included-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.included-item__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-success);
+}
+
+.included-item__text {
+  color: var(--color-dark-gray);
+}
+
+/* Service Areas List */
+.service-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.service-area-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-off-white);
+  border-radius: var(--radius-md);
+}
+
+.service-area-item__icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact-info__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.contact-info__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+}
+
+.contact-info__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-info__label {
+  font-size: var(--text-sm);
+  color: var(--color-medium-gray);
+}
+
+.contact-info__value {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-dark-gray);
+}
+
+.contact-info__link {
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+}
+
+.contact-info__link:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Thank You Page */
+.thank-you-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: calc(72px + var(--space-12));
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: var(--color-white);
+}
+
+.thank-you__icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-6);
+  color: var(--color-accent);
+}
+
+.thank-you__title {
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.thank-you__text {
+  font-size: var(--text-lg);
+  opacity: 0.9;
+  max-width: 500px;
+  margin: 0 auto var(--space-8);
+}
+
+/* 404 Page */
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.error-page__code {
+  font-family: var(--font-heading);
+  font-size: 8rem;
+  font-weight: var(--font-extrabold);
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-4);
+}
+
+.error-page__title {
+  margin-bottom: var(--space-4);
+}
+
+.error-page__text {
+  color: var(--color-medium-gray);
+  margin-bottom: var(--space-8);
+}
+
+/* Reviews Page */
+.review-cta {
+  text-align: center;
+  padding: var(--space-10);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  border-radius: var(--radius-2xl);
+}
+
+.review-cta__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-4);
+  color: var(--color-white);
+}
+
+.review-cta__title {
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.review-cta__text {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  margin: 0 auto var(--space-6);
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================== */
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  :root {
+    --text-4xl: 2.5rem;
+    --text-5xl: 3.5rem;
+  }
+
+  h1 {
+    font-size: var(--text-4xl);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+  }
+
+  .container {
+    padding: 0 var(--space-6);
+  }
+
+  .section {
+    padding: var(--space-20) 0;
+  }
+
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .hero__title {
+    font-size: var(--text-5xl);
+  }
+
+  .hero__cta {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .section-header__title {
+    font-size: var(--text-4xl);
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-areas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  :root {
+    --text-5xl: 4rem;
+    --text-6xl: 5rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .header__phone {
+    display: flex;
+  }
+
+  .header__review-link {
+    display: inline-flex;
+  }
+
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .mobile-cta-bar {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  .hero__title {
+    font-size: var(--text-6xl);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .service-areas-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large Desktop (1280px and up) */
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 var(--space-8);
+  }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+@media print {
+  .header,
+  .mobile-cta-bar,
+  .mobile-nav,
+  .btn {
+    display: none !important;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .section {
+    padding: var(--space-8) 0;
+  }
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/images/hero.png') no-repeat center center !important;
+  background-size: cover !important;
+  background-attachment: scroll !important;
+}
+.btn--primary, .btn--accent, .mobile-cta-bar__btn--book {
+  background: var(--color-primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-primary) !important;
+}
+  </style>
+
+  <title>Sparkle Clean Co | Professional Cleaning in Calhoun, GA</title>
+
+  <!-- JSON-LD Schema -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Sparkle Clean Co","description":"Professional Cleaning in Calhoun, GA","telephone":"706-555-0187","email":"corey@forge-dev-studio.com","address":{"@type":"PostalAddress","streetAddress":"120 Wall St, Calhoun, GA 30701","addressLocality":"Calhoun","addressRegion":"GA"},"areaServed":"Calhoun, GA and surrounding areas","priceRange":"$$"}
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sparkle Clean Co",
+    "image": "https://forge-dev-studio.github.io/demo-sparkle-clean-co/assets/images/hero.png",
+    "description": "Professional Cleaning in Calhoun, GA",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "120 Wall St, Calhoun, GA 30701",
+      "addressLocality": "Calhoun",
+      "addressRegion": "GA",
+      "postalCode": "",
+      "addressCountry": "US"
+    },
+    "telephone": "706-555-0187",
+    "email": "corey@forge-dev-studio.com",
+    "url": "https://forge-dev-studio.github.io/demo-sparkle-clean-co",
+    "openingHours": "Mon-Sat: 7:00 AM - 6:00 PM",
+    "priceRange": "$$",
+    "areaServed": "Calhoun, GA and surrounding areas",
+    "sameAs": [
+      "#",
+      "#"
+    ]
+  }
   </script>
 </head>
-
 <body>
-  <header class="header">
+  <!-- Header -->
+  <header class="header" role="banner">
     <div class="container">
       <div class="header__inner">
-        <a href="index.html" class="header__logo">Sparkle Clean Co</a>
-        <nav class="nav">
+        <a href="index.html" class="header__logo" aria-label="Sparkle Clean Co - Home">
+          <span>Sparkle Clean Co</span>
+        </a>
+
+        <nav class="nav" role="navigation" aria-label="Main navigation">
           <ul class="nav__list">
             <li><a href="index.html" class="nav__link active">Home</a></li>
             <li><a href="services/index.html" class="nav__link">Services</a></li>
             <li><a href="gallery.html" class="nav__link">Gallery</a></li>
             <li><a href="about.html" class="nav__link">About</a></li>
-            <li><a href="service-areas.html" class="nav__link">Service Areas</a></li>
-            <li><a href="reviews.html" class="nav__link">Reviews</a></li>
-            <li><a href="faq.html" class="nav__link">FAQ</a></li>
             <li><a href="contact.html" class="nav__link">Contact</a></li>
           </ul>
         </nav>
+
         <div class="header__actions">
-          <a href="#" class="header__review-link" target="_blank">⭐ Leave a Review</a>
-          <a href="tel:706-555-0187" class="header__phone">706-555-0187</a>
+          <a href="tel:706-555-0187" class="header__phone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            706-555-0187
+          </a>
           <a href="booking.html" class="btn btn--primary btn--sm">Get a Free Quote</a>
         </div>
-        <button class="menu-toggle" aria-label="Toggle menu"><span class="menu-toggle__bar"></span><span
-            class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span></button>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <nav class="mobile-nav" aria-hidden="true">
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
     <ul class="mobile-nav__list">
       <li><a href="index.html" class="mobile-nav__link active">Home</a></li>
       <li><a href="services/index.html" class="mobile-nav__link">Services</a></li>
@@ -64,106 +1832,179 @@
     </ul>
     <div class="mobile-nav__cta">
       <div class="mobile-nav__contact">
-        <a href="tel:706-555-0187" class="mobile-nav__phone">📞 Call: 706-555-0187</a>
-        <a href="sms:706-555-0187" class="mobile-nav__text">💬 Text: 706-555-0187</a>
+        <a href="tel:706-555-0187" class="mobile-nav__phone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Call: 706-555-0187
+        </a>
+        <a href="sms:706-555-0187" class="mobile-nav__text">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Text: 706-555-0187
+        </a>
       </div>
       <a href="booking.html" class="btn btn--primary btn--full">Get a Free Quote</a>
-      <a href="#" class="btn btn--accent btn--full mt-4" target="_blank">⭐ Leave a Google Review</a>
+      <a href="#" class="btn btn--accent btn--full mt-4" target="_blank" rel="noopener">⭐ Leave a Google Review</a>
     </div>
   </nav>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <div class="hero__content">
-          <div class="hero__badge">🛡️ Licensed Pest Control Professionals</div>
-          <h1 class="hero__title">Protect Your Home From Unwanted Pests</h1>
-          <p class="hero__subtitle">Professional Cleaning in Calhoun, GA. Fast, effective pest control solutions that keep your family
-            safe. Same-day service available in Calhoun, GA and surrounding areas.</p>
+          <div class="hero__badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+            Calhoun's Most Trusted Cleaning Team
+          </div>
+          <h1 class="hero__title">Expert Cleaning Services for Your Home</h1>
+          <p class="hero__subtitle">Trusted Cleaning professionals in Calhoun, GA. Quality craftsmanship and dedicated service for every project.</p>
+
           <div class="hero__cta">
             <a href="booking.html" class="btn btn--accent btn--lg">Get a Free Quote</a>
             <a href="tel:706-555-0187" class="btn btn--outline btn--lg">Call 706-555-0187</a>
           </div>
+
           <div class="hero__trust">
-            <div class="hero__trust-item">🛡️ Licensed & Insured</div>
-            <div class="hero__trust-item">✅ Free Inspections</div>
-            <div class="hero__trust-item">⚡ Same-Day Service</div>
-            <div class="hero__trust-item">⭐ 5-Star Rated</div>
+            <div class="hero__trust-item">
+              <svg class="hero__trust-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+              </svg>
+              Licensed & Insured
+            </div>
+            <div class="hero__trust-item">
+              <svg class="hero__trust-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              Free Estimates
+            </div>
+            <div class="hero__trust-item">
+              <svg class="hero__trust-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+              </svg>
+              On-Time Service
+            </div>
+            <div class="hero__trust-item">
+              <svg class="hero__trust-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              5-Star Rated
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+      <div class="container">
+        <div class="trust-bar__inner">
+          <div class="trust-item">
+            <svg class="trust-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            Locally owned | Licensed & Insured | Free Estimates
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
     <section class="section" id="services">
       <div class="container">
         <div class="section-header">
           <span class="section-header__label">Our Services</span>
-          <h2 class="section-header__title">Complete Pest Control Solutions</h2>
-          <p class="section-header__text">From common household pests to specialized treatments, we have the expertise
-            to handle any infestation.</p>
+          <h2 class="section-header__title">Our Cleaning Services</h2>
+          <p class="section-header__text">We offer comprehensive Cleaning solutions to keep your property looking its best and protect its value.</p>
         </div>
+
         <div class="grid grid--4">
+          <!-- Service 1: Driveway & Concrete Cleaning -->
           <article class="card service-card">
-            <div class="service-card__image" style="background: linear-gradient(135deg, #E65100 0%, #FF6D00 100%);">
-            </div>
+            <div class="service-card__image" style="background-image: url('assets/images/service-1.png');" role="img" aria-label="Cleaning Maintenance"></div>
             <div class="service-card__content">
-              <h3 class="card__title">General Pest Control</h3>
-              <p class="card__text">Comprehensive treatment for ants, roaches, spiders, and other common household
-                pests.</p>
-              <a href="services/general-pest-control.html" class="card__link">Learn More →</a>
+              <h3 class="card__title">Cleaning Maintenance</h3>
+              <p class="card__text">Professional care and maintenance to ensure your property remains in top condition year-round.</p>
+              <a href="services/driveway-cleaning.html" class="card__link">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
             </div>
           </article>
+
+          <!-- Service 2: House Soft Washing -->
           <article class="card service-card">
-            <div class="service-card__image" style="background: linear-gradient(135deg, #BF360C 0%, #E65100 100%);">
-            </div>
+            <div class="service-card__image" style="background-image: url('assets/images/service-2.png');" role="img" aria-label="Expert Cleaning Repairs"></div>
             <div class="service-card__content">
-              <h3 class="card__title">Termite Control</h3>
-              <p class="card__text">Protect your home from costly termite damage with our proven treatment and
-                prevention methods.</p>
-              <a href="services/termite-control.html" class="card__link">Learn More →</a>
+              <h3 class="card__title">Expert Cleaning Repairs</h3>
+              <p class="card__text">Skilled repairs for any issue, delivered with attention to detail and long-lasting results.</p>
+              <a href="services/house-soft-washing.html" class="card__link">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
             </div>
           </article>
+
+          <!-- Service 3: Safe Roof Cleaning -->
           <article class="card service-card">
-            <div class="service-card__image" style="background: linear-gradient(135deg, #FF6D00 0%, #FF8F00 100%);">
-            </div>
+            <div class="service-card__image" style="background-image: url('assets/images/service-3.png');" role="img" aria-label="Custom Cleaning Projects"></div>
             <div class="service-card__content">
-              <h3 class="card__title">Rodent Control</h3>
-              <p class="card__text">Effective mouse and rat elimination with exclusion services to prevent future
-                infestations.</p>
-              <a href="services/rodent-control.html" class="card__link">Learn More →</a>
+              <h3 class="card__title">Custom Cleaning Projects</h3>
+              <p class="card__text">Tailored solutions designed to meet your specific needs and exceed your expectations.</p>
+              <a href="services/roof-cleaning.html" class="card__link">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
             </div>
           </article>
+
+          <!-- Service 4: Gutter Brightening -->
           <article class="card service-card">
-            <div class="service-card__image" style="background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);">
-            </div>
+            <div class="service-card__image" style="background-image: url('assets/images/service-4.png');" role="img" aria-label="Emergency Cleaning Services"></div>
             <div class="service-card__content">
-              <h3 class="card__title">Mosquito & Tick Control</h3>
-              <p class="card__text">Take back your yard with targeted treatments that reduce mosquito and tick
-                populations.</p>
-              <a href="services/mosquito-tick-control.html" class="card__link">Learn More →</a>
+              <h3 class="card__title">Emergency Cleaning Services</h3>
+              <p class="card__text">Rapid response and reliable solutions when you need them most, 24/7.</p>
+              <a href="services/gutter-brightening.html" class="card__link">
+                Learn More
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
             </div>
           </article>
         </div>
+
         <div class="text-center mt-8">
           <a href="services/index.html" class="btn btn--secondary">View All Services</a>
         </div>
       </div>
     </section>
 
+    <!-- Stats Section -->
     <section class="section section--primary">
       <div class="container">
         <div class="stats">
           <div class="stat">
-            <div class="stat__number">20+</div>
+            <div class="stat__number">15+</div>
             <div class="stat__label">Years Experience</div>
           </div>
           <div class="stat">
-            <div class="stat__number">10,000+</div>
-            <div class="stat__label">Homes Protected</div>
+            <div class="stat__number">2,500+</div>
+            <div class="stat__label">Projects Completed</div>
           </div>
           <div class="stat">
             <div class="stat__number">100%</div>
-            <div class="stat__label">Satisfaction Guarantee</div>
+            <div class="stat__label">Satisfaction Guaranteed</div>
           </div>
           <div class="stat">
             <div class="stat__number">5.0</div>
@@ -173,151 +2014,300 @@
       </div>
     </section>
 
+    <!-- Process Section -->
     <section class="section section--light">
       <div class="container">
         <div class="section-header">
           <span class="section-header__label">How It Works</span>
-          <h2 class="section-header__title">Our 4-Step Process</h2>
+          <h2 class="section-header__title">Our Simple 4-Step Process</h2>
+          <p class="section-header__text">Getting started is easy. Here's how we turn your outdoor dreams into reality.</p>
         </div>
+
         <div class="process-steps">
           <div class="process-step">
             <div class="process-step__number">1</div>
             <div class="process-step__content">
-              <h3 class="process-step__title">Free Inspection</h3>
-              <p class="process-step__text">Call <a href="tel:706-555-0187">706-555-0187</a> or book online. We'll thoroughly
-                inspect your property to identify the problem.</p>
+              <h3 class="process-step__title">Request a Free Estimate</h3>
+              <p class="process-step__text">Call us at <a href="tel:706-555-0187">706-555-0187</a>, text us at <a href="sms:706-555-0187">706-555-0187</a>, or book online. We'll schedule a convenient time to assess your property.</p>
             </div>
           </div>
           <div class="process-step">
             <div class="process-step__number">2</div>
             <div class="process-step__content">
-              <h3 class="process-step__title">Custom Treatment Plan</h3>
-              <p class="process-step__text">We develop a targeted treatment plan based on the type and severity of
-                infestation.</p>
+              <h3 class="process-step__title">On-Site Consultation</h3>
+              <p class="process-step__text">Our expert team visits your property to understand your needs, answer questions, and provide a detailed, transparent quote.</p>
             </div>
           </div>
           <div class="process-step">
             <div class="process-step__number">3</div>
             <div class="process-step__content">
-              <h3 class="process-step__title">Professional Treatment</h3>
-              <p class="process-step__text">Our licensed technicians apply safe, effective treatments using
-                industry-leading products.</p>
+              <h3 class="process-step__title">Professional Service</h3>
+              <p class="process-step__text">Once approved, our skilled crew completes the work on schedule with attention to detail and respect for your property.</p>
             </div>
           </div>
           <div class="process-step">
             <div class="process-step__number">4</div>
             <div class="process-step__content">
-              <h3 class="process-step__title">Ongoing Protection</h3>
-              <p class="process-step__text">We provide follow-up visits and preventive services to keep pests away for
-                good.</p>
+              <h3 class="process-step__title">Final Walkthrough</h3>
+              <p class="process-step__text">We walk through the completed work with you to ensure your complete satisfaction before we consider the job done.</p>
             </div>
           </div>
         </div>
+
         <div class="text-center mt-8">
-          <a href="booking.html" class="btn btn--primary btn--lg">Schedule Free Inspection</a>
+          <a href="booking.html" class="btn btn--primary btn--lg">Get Your Free Estimate</a>
         </div>
       </div>
     </section>
 
+    <!-- Gallery Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Our Work</span>
+          <h2 class="section-header__title">See Our Recent Projects</h2>
+          <p class="section-header__text">Browse through some of our completed Cleaning projects.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="assets/images/service-1.png" alt="House Deep Clean project" class="gallery-item__image" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">House Deep Clean</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/service-2.png" alt="Kitchen Deep Clean project" class="gallery-item__image" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Kitchen Deep Clean</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/service-3.png" alt="Floor Cleaning project" class="gallery-item__image" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Floor & Surface Clean</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/service-4.png" alt="Bathroom Deep Clean project" class="gallery-item__image" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Bathroom Deep Clean</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery-5.png" alt="Carpet cleaning project" class="gallery-item__image" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Carpet & Upholstery</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery-6.png" alt="Window cleaning project" class="gallery-item__image" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Window Cleaning</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery-7.png" alt="Full home cleaning project" class="gallery-item__image" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Move-In / Move-Out</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/gallery-8.png" alt="Bathroom sink cleaning project" class="gallery-item__image" loading="lazy">
+            <div class="gallery-item__overlay">
+              <span class="gallery-item__caption">Fixture Detailing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="gallery.html" class="btn btn--secondary">View Full Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
     <section class="section section--dark" id="contact">
       <div class="container">
         <div class="grid grid--2" style="align-items: center;">
           <div>
             <div class="section-header section-header--left section-header--light">
               <span class="section-header__label">Get In Touch</span>
-              <h2 class="section-header__title">Got Pests? We've Got Solutions.</h2>
-              <p class="section-header__text">Fill out the form for a free inspection, or call us now for immediate
-                assistance.</p>
+              <h2 class="section-header__title">Ready to Transform Your Outdoor Space?</h2>
+              <p class="section-header__text">Fill out the form and we'll get back to you within 24 hours. Or call us directly for immediate assistance.</p>
             </div>
+
             <div class="contact-info" style="margin-top: 2rem;">
               <div class="contact-info__item">
-                <div class="contact-info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg></div>
+                <div class="contact-info__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
                 <div>
-                  <div class="contact-info__label">Call Us</div><a href="tel:706-555-0187"
-                    class="contact-info__value contact-info__link">706-555-0187</a>
+                  <div class="contact-info__label">Call Us</div>
+                  <a href="tel:706-555-0187" class="contact-info__value contact-info__link">706-555-0187</a>
                 </div>
               </div>
               <div class="contact-info__item">
-                <div class="contact-info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg></div>
+                <div class="contact-info__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </div>
                 <div>
-                  <div class="contact-info__label">Text Us</div><a href="sms:706-555-0187"
-                    class="contact-info__value contact-info__link">706-555-0187</a>
+                  <div class="contact-info__label">Text Us</div>
+                  <a href="sms:706-555-0187" class="contact-info__value contact-info__link">706-555-0187</a>
                 </div>
               </div>
             </div>
           </div>
+
           <div>
+            <!-- CONTACT_FORM_EMBED -->
             <div class="ghl-embed-placeholder">
-              <svg class="ghl-embed-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="1.5">
-                <path
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              <svg class="ghl-embed-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
               </svg>
               <h3 class="ghl-embed-placeholder__title">GoHighLevel Contact Form Embed Goes Here</h3>
               <p class="ghl-embed-placeholder__text">Replace this placeholder with your GHL form embed code</p>
             </div>
+            <!-- END CONTACT_FORM_EMBED -->
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Service Areas Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-header__label">Service Areas</span>
+          <h2 class="section-header__title">Proudly Serving Calhoun, GA and surrounding areas</h2>
+          <p class="section-header__text">We provide professional Cleaning services throughout the region.</p>
+        </div>
+
+        <div class="service-areas-grid">
+          <div class="service-area-item">
+            <svg class="service-area-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            City Name 1
+          </div>
+          <div class="service-area-item">
+            <svg class="service-area-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            City Name 2
+          </div>
+          <div class="service-area-item">
+            <svg class="service-area-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            City Name 3
+          </div>
+          <div class="service-area-item">
+            <svg class="service-area-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            City Name 4
+          </div>
+          <div class="service-area-item">
+            <svg class="service-area-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            City Name 5
+          </div>
+          <div class="service-area-item">
+            <svg class="service-area-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            City Name 6
+          </div>
+          <div class="service-area-item">
+            <svg class="service-area-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            City Name 7
+          </div>
+          <div class="service-area-item">
+            <svg class="service-area-item__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            City Name 8
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="service-areas.html" class="btn btn--secondary">View All Service Areas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Preview Section -->
     <section class="section section--light">
       <div class="container">
         <div class="section-header">
           <span class="section-header__label">FAQ</span>
-          <h2 class="section-header__title">Common Questions</h2>
+          <h2 class="section-header__title">Frequently Asked Questions</h2>
+          <p class="section-header__text">Find answers to common questions about our services.</p>
         </div>
+
         <div class="faq-list" style="max-width: 800px; margin: 0 auto;">
-          <div class="faq-item"><button class="faq-item__question">How quickly can you respond?<svg
-                class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg></button>
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              How do I get a free estimate?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
             <div class="faq-item__answer">
               <div class="faq-item__answer-inner">
-                <p>We offer same-day service for most pest emergencies. Call us at <a href="tel:706-555-0187">706-555-0187</a>
-                  for immediate assistance.</p>
+                <p>Getting a free estimate is easy! You can call us at <a href="tel:706-555-0187">706-555-0187</a>, text us at <a href="sms:706-555-0187">706-555-0187</a>, or use our online booking form. We'll schedule a convenient time to visit your property and provide a detailed quote.</p>
               </div>
             </div>
           </div>
-          <div class="faq-item"><button class="faq-item__question">Are your treatments safe for kids and pets?<svg
-                class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg></button>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              Are you licensed and insured?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
             <div class="faq-item__answer">
               <div class="faq-item__answer-inner">
-                <p>Yes! We use EPA-registered products and apply them according to label directions. We'll advise you on
-                  any necessary precautions.</p>
+                <p>Yes, we are fully licensed and insured. We carry comprehensive liability insurance and workers' compensation coverage to protect both our team and your property.</p>
               </div>
             </div>
           </div>
-          <div class="faq-item"><button class="faq-item__question">Do you offer a guarantee?<svg class="faq-item__icon"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" />
-              </svg></button>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              What areas do you serve?
+              <svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </button>
             <div class="faq-item__answer">
               <div class="faq-item__answer-inner">
-                <p>Absolutely. We stand behind our work with a satisfaction guarantee. If pests return between
-                  treatments, so do we - at no extra charge.</p>
+                <p>We proudly serve Calhoun, GA and surrounding areas and surrounding communities. Visit our <a href="service-areas.html">service areas page</a> for a complete list of locations we serve.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="text-center mt-8"><a href="faq.html" class="btn btn--secondary">View All FAQs</a></div>
+
+        <div class="text-center mt-8">
+          <a href="faq.html" class="btn btn--secondary">View All FAQs</a>
+        </div>
       </div>
     </section>
 
+    <!-- Final CTA Section -->
     <section class="section section--primary">
       <div class="container text-center">
-        <h2 style="color: white;">Don't Let Pests Take Over Your Home</h2>
-        <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 1rem auto 2rem;">Schedule your free inspection
-          today and take the first step toward a pest-free home.</p>
+        <h2 style="color: var(--color-white); margin-bottom: var(--space-4);">Ready to Get Started?</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: var(--text-lg); max-width: 600px; margin: 0 auto var(--space-8);">Book Your Free Estimate</p>
         <div class="btn-group" style="justify-content: center;">
           <a href="booking.html" class="btn btn--accent btn--lg">Get a Free Quote</a>
           <a href="tel:706-555-0187" class="btn btn--outline btn--lg">Call 706-555-0187</a>
@@ -326,66 +2316,424 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="footer__logo">Sparkle Clean Co</div>
-          <p class="footer__text">Professional pest control services you can trust. Serving Calhoun, GA and surrounding areas.</p>
+          <p class="footer__text">Professional Cleaning serving Calhoun, GA and surrounding areas.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="17.5" cy="6.5" r="1.5"/>
+              </svg>
+            </a>
+          </div>
         </div>
+
         <div>
           <h4 class="footer__column-title">Quick Links</h4>
           <ul class="footer__links">
             <li><a href="index.html" class="footer__link">Home</a></li>
             <li><a href="services/index.html" class="footer__link">Services</a></li>
-            <li><a href="about.html" class="footer__link">About</a></li>
+            <li><a href="gallery.html" class="footer__link">Gallery</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
             <li><a href="contact.html" class="footer__link">Contact</a></li>
           </ul>
         </div>
+
         <div>
           <h4 class="footer__column-title">Services</h4>
           <ul class="footer__links">
-            <li><a href="services/general-pest-control.html" class="footer__link">General Pest Control</a></li>
-            <li><a href="services/termite-control.html" class="footer__link">Termite Control</a></li>
-            <li><a href="services/rodent-control.html" class="footer__link">Rodent Control</a></li>
-            <li><a href="services/mosquito-tick-control.html" class="footer__link">Mosquito & Tick</a></li>
+            <li><a href="services/driveway-cleaning.html" class="footer__link">Driveway Cleaning</a></li>
+            <li><a href="services/house-soft-washing.html" class="footer__link">House Soft Washing</a></li>
+            <li><a href="services/roof-cleaning.html" class="footer__link">Roof Cleaning</a></li>
+            <li><a href="services/gutter-brightening.html" class="footer__link">Gutter Brightening</a></li>
           </ul>
         </div>
+
         <div>
-          <h4 class="footer__column-title">Contact</h4>
-          <div class="footer__contact-item"><a href="tel:706-555-0187">706-555-0187</a></div>
-          <div class="footer__contact-item"><a href="mailto:corey@forge-dev-studio.com">corey@forge-dev-studio.com</a></div>
-          <div class="footer__contact-item">Mon-Sat: 7:00 AM - 6:00 PM</div><a href="#"
-            class="footer__review-btn" target="_blank">⭐ Leave a Review</a>
+          <h4 class="footer__column-title">Contact Us</h4>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <a href="tel:706-555-0187">706-555-0187</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:corey@forge-dev-studio.com">corey@forge-dev-studio.com</a>
+          </div>
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Mon-Sat: 7:00 AM - 6:00 PM
+          </div>
+          <a href="#" class="footer__review-btn" target="_blank" rel="noopener">
+            ⭐ Leave a Google Review
+          </a>
         </div>
       </div>
+
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; <span data-year></span> Sparkle Clean Co. All rights reserved.</p>
-        <div class="footer__legal"><a href="privacy.html" class="footer__legal-link">Privacy Policy</a></div>
+        <div class="footer__legal">
+          <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="service-areas.html" class="footer__legal-link">Service Areas</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Sticky Mobile CTA Bar -->
   <div class="mobile-cta-bar">
-    <a href="tel:706-555-0187" class="mobile-cta-bar__btn mobile-cta-bar__btn--call"><svg class="mobile-cta-bar__icon"
-        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path
-          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-      </svg>Call</a>
-    <a href="sms:706-555-0187" class="mobile-cta-bar__btn mobile-cta-bar__btn--text"><svg
-        class="mobile-cta-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-      </svg>Text</a>
-    <a href="booking.html" class="mobile-cta-bar__btn mobile-cta-bar__btn--book"><svg class="mobile-cta-bar__icon"
-        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-        <line x1="16" y1="2" x2="16" y2="6" />
-        <line x1="8" y1="2" x2="8" y2="6" />
-        <line x1="3" y1="10" x2="21" y2="10" />
-      </svg>Book</a>
+    <a href="tel:706-555-0187" class="mobile-cta-bar__btn mobile-cta-bar__btn--call">
+      <svg class="mobile-cta-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      Call
+    </a>
+    <a href="sms:706-555-0187" class="mobile-cta-bar__btn mobile-cta-bar__btn--text">
+      <svg class="mobile-cta-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      Text
+    </a>
+    <a href="booking.html" class="mobile-cta-bar__btn mobile-cta-bar__btn--book">
+      <svg class="mobile-cta-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+      Book
+    </a>
   </div>
 
-  <script src="assets/js/main.js"></script>
-</body>
+  <!-- Optional: GoHighLevel Chat Widget -->
+  <!-- CHAT_WIDGET_SCRIPT -->
+  <!-- Optional GoHighLevel Chat Widget Loads Here -->
+  <!-- END CHAT_WIDGET_SCRIPT -->
 
+  <script>
+/* ============================================
+   PRESSURE WASHING - MAIN JAVASCRIPT
+   Navigation, UI Interactions, and Utilities
+   ============================================ */
+
+(function() {
+  'use strict';
+
+  // ==========================================
+  // DOM ELEMENTS
+  // ==========================================
+  const header = document.querySelector('.header');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const navLinks = document.querySelectorAll('.nav__link, .mobile-nav__link');
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  // ==========================================
+  // MOBILE NAVIGATION
+  // ==========================================
+  function initMobileNav() {
+    if (!menuToggle || !mobileNav) return;
+
+    menuToggle.addEventListener('click', function() {
+      const isActive = this.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = isActive ? 'hidden' : '';
+
+      // Update ARIA attributes
+      this.setAttribute('aria-expanded', isActive);
+      mobileNav.setAttribute('aria-hidden', !isActive);
+    });
+
+    // Close menu when clicking a link
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // ==========================================
+  // HEADER SCROLL BEHAVIOR
+  // ==========================================
+  function initHeaderScroll() {
+    if (!header) return;
+
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeader() {
+      const scrollY = window.scrollY;
+
+      // Add/remove scrolled class for shadow
+      if (scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      lastScrollY = scrollY;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  // ==========================================
+  // ACTIVE NAVIGATION LINK
+  // ==========================================
+  function setActiveNavLink() {
+    const currentPath = window.location.pathname;
+
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+
+      // Handle both relative and absolute paths
+      if (linkPath === currentPath ||
+          currentPath.endsWith(linkPath) ||
+          (linkPath !== '/' && linkPath !== 'index.html' && currentPath.includes(linkPath.replace('.html', '')))) {
+        link.classList.add('active');
+      } else if (linkPath === 'index.html' && (currentPath === '/' || currentPath.endsWith('index.html') || currentPath.endsWith('/'))) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // ==========================================
+  // FAQ ACCORDION
+  // ==========================================
+  function initFaqAccordion() {
+    if (!faqItems.length) return;
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-item__question');
+      const answer = item.querySelector('.faq-item__answer');
+
+      if (!question || !answer) return;
+
+      question.addEventListener('click', function() {
+        const isActive = item.classList.contains('active');
+
+        // Close all other items (optional - remove for multi-open)
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+
+        // Toggle current item
+        item.classList.toggle('active');
+
+        // Update ARIA attributes
+        this.setAttribute('aria-expanded', !isActive);
+      });
+    });
+  }
+
+  // ==========================================
+  // SMOOTH SCROLL FOR ANCHOR LINKS
+  // ==========================================
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          e.preventDefault();
+
+          const headerHeight = header ? header.offsetHeight : 0;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  }
+
+  // ==========================================
+  // LAZY LOADING IMAGES
+  // ==========================================
+  function initLazyLoading() {
+    // Check for native lazy loading support
+    if ('loading' in HTMLImageElement.prototype) {
+      // Browser supports lazy loading
+      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+        }
+      });
+    } else {
+      // Fallback for browsers that don't support lazy loading
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+              }
+              img.classList.add('loaded');
+              observer.unobserve(img);
+            }
+          });
+        }, {
+          rootMargin: '50px 0px',
+          threshold: 0.01
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+      }
+    }
+  }
+
+  // ==========================================
+  // FORM VALIDATION (Basic)
+  // ==========================================
+  function initFormValidation() {
+    const forms = document.querySelectorAll('form[data-validate]');
+
+    forms.forEach(form => {
+      form.addEventListener('submit', function(e) {
+        let isValid = true;
+        const requiredFields = form.querySelectorAll('[required]');
+
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            isValid = false;
+            field.classList.add('error');
+          } else {
+            field.classList.remove('error');
+          }
+        });
+
+        if (!isValid) {
+          e.preventDefault();
+        }
+      });
+    });
+  }
+
+  // ==========================================
+  // ANIMATE ON SCROLL (Simple)
+  // ==========================================
+  function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('[data-animate]');
+
+    if (!animatedElements.length || !('IntersectionObserver' in window)) return;
+
+    const animationObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          animationObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    animatedElements.forEach(el => animationObserver.observe(el));
+  }
+
+  // ==========================================
+  // PHONE NUMBER FORMATTING
+  // ==========================================
+  function formatPhoneLinks() {
+    // Ensure tel: links are properly formatted
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+      // Remove any spaces or special characters from tel: href
+      const phoneNumber = link.getAttribute('href').replace('tel:', '').replace(/\D/g, '');
+      link.setAttribute('href', 'tel:' + phoneNumber);
+    });
+
+    // Ensure sms: links are properly formatted
+    document.querySelectorAll('a[href^="sms:"]').forEach(link => {
+      const phoneNumber = link.getAttribute('href').replace('sms:', '').replace(/\D/g, '');
+      link.setAttribute('href', 'sms:' + phoneNumber);
+    });
+  }
+
+  // ==========================================
+  // CURRENT YEAR IN FOOTER
+  // ==========================================
+  function updateCopyrightYear() {
+    const yearElements = document.querySelectorAll('[data-year]');
+    const currentYear = new Date().getFullYear();
+
+    yearElements.forEach(el => {
+      el.textContent = currentYear;
+    });
+  }
+
+  // ==========================================
+  // INITIALIZE ALL FUNCTIONS
+  // ==========================================
+  function init() {
+    initMobileNav();
+    initHeaderScroll();
+    setActiveNavLink();
+    initFaqAccordion();
+    initSmoothScroll();
+    initLazyLoading();
+    initFormValidation();
+    initScrollAnimations();
+    formatPhoneLinks();
+    updateCopyrightYear();
+  }
+
+  // Run on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();
+  </script>
+</body>
 </html>
