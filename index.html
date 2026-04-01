@@ -1305,6 +1305,395 @@ p:last-child {
   height: 22px;
 }
 
+/* ==========================================
+   BOOKING WIDGET
+   ========================================== */
+.bw {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 40px rgba(0,0,0,.10);
+  overflow: hidden;
+}
+
+.bw__steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 24px 32px 0;
+  background: #fff;
+}
+
+.bw__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.bw__step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-light-gray, #e5e7eb);
+  color: #9ca3af;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, color .2s;
+}
+
+.bw__step--active .bw__step-num,
+.bw__step--done .bw__step-num {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.bw__step-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.bw__step--active .bw__step-label {
+  color: var(--color-primary);
+}
+
+.bw__step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--color-light-gray, #e5e7eb);
+  min-width: 40px;
+  max-width: 80px;
+  margin-bottom: 18px;
+}
+
+.bw__panel {
+  padding: 28px 32px 32px;
+}
+
+.bw__panel--hidden {
+  display: none;
+}
+
+.bw__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Calendar */
+.bw__calendar {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bw__cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.bw__cal-month {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.bw__cal-nav {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  opacity: .85;
+  transition: opacity .15s;
+}
+
+.bw__cal-nav:hover { opacity: 1; }
+
+.bw__cal-nav svg {
+  width: 18px;
+  height: 18px;
+}
+
+.bw__cal-dow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  padding: 10px 8px 4px;
+  gap: 2px;
+}
+
+.bw__cal-dow span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.bw__cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  padding: 4px 8px 12px;
+}
+
+.bw__day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #374151;
+  transition: background .15s, color .15s;
+}
+
+.bw__day:hover:not(:disabled) {
+  background: var(--color-primary-light, #e3f2fd);
+  color: var(--color-primary);
+}
+
+.bw__day--selected {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+}
+
+.bw__day--today {
+  font-weight: 700;
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.bw__day:disabled,
+.bw__day--empty {
+  color: #d1d5db;
+  cursor: default;
+  pointer-events: none;
+}
+
+.bw__day--past {
+  opacity: .35;
+}
+
+/* Times */
+.bw__times {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bw__times-prompt {
+  color: #9ca3af;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bw__times-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.bw__time-btn {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color .15s, background .15s, color .15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bw__time-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.bw__time-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.bw__time-btn--selected {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.bw__time-btn--selected svg {
+  color: rgba(255,255,255,.8);
+}
+
+/* Panel 2 */
+.bw__selected-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--color-primary-light, #e3f2fd);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.bw__selected-bar svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.bw__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bw__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.bw__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1a1a2e;
+  background: #fafafa;
+  transition: border-color .15s;
+  box-sizing: border-box;
+}
+
+.bw__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: #fff;
+}
+
+.bw__textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.bw__submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.bw__back-link {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  padding: 4px;
+  text-decoration: underline;
+}
+
+.bw__back-link:hover { color: #374151; }
+
+/* Panel 3 */
+.bw__confirm {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.bw__confirm-check {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.bw__confirm-check svg {
+  width: 36px;
+  height: 36px;
+  color: #16a34a;
+}
+
+.bw__confirm-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.bw__confirm-text {
+  color: #6b7280;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.bw__confirm-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-primary-light, #e3f2fd);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.bw__confirm-call {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .bw__panel { padding: 20px 16px 24px; }
+  .bw__steps { padding: 20px 16px 0; }
+  .bw__body { grid-template-columns: 1fr; }
+  .bw__form-row { grid-template-columns: 1fr; }
+  .bw__step-line { min-width: 24px; }
+}
+
 /* Add padding to body for mobile CTA bar */
 body {
   padding-bottom: 85px;
@@ -2111,8 +2500,84 @@ body {
           <h2 class="section-header__title">Book Your Free Estimate</h2>
           <p class="section-header__text">Pick a time that works for you. No obligation -- we'll confirm within the hour.</p>
         </div>
-        <div style="max-width:860px;margin:0 auto;">
-          <iframe src="https://api.leadconnectorhq.com/widget/booking/NpbW9M9CiXhFAXp9zDay?business_name=Sparkle+Clean+Co&demo_slug=sparkle-clean-co&city=Calhoun&state=GA" style="width:100%;height:700px;border:none;border-radius:8px;" id="msgsndr-calendar" title="Book Your Free Estimate"></iframe><script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+        <!-- Custom Booking Widget -->
+        <div class="bw" id="booking-widget">
+
+          <!-- Step Indicator -->
+          <div class="bw__steps">
+            <div class="bw__step bw__step--active" id="bw-ind-1">
+              <div class="bw__step-num">1</div>
+              <div class="bw__step-label">Choose Time</div>
+            </div>
+            <div class="bw__step-line"></div>
+            <div class="bw__step" id="bw-ind-2">
+              <div class="bw__step-num">2</div>
+              <div class="bw__step-label">Your Info</div>
+            </div>
+            <div class="bw__step-line"></div>
+            <div class="bw__step" id="bw-ind-3">
+              <div class="bw__step-num">3</div>
+              <div class="bw__step-label">Confirmed</div>
+            </div>
+          </div>
+
+          <!-- Panel 1: Date + Time -->
+          <div class="bw__panel" id="bw-panel-1">
+            <div class="bw__body">
+              <div class="bw__calendar">
+                <div class="bw__cal-header">
+                  <button class="bw__cal-nav" id="bw-prev" aria-label="Previous month">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                  </button>
+                  <span class="bw__cal-month" id="bw-month-label"></span>
+                  <button class="bw__cal-nav" id="bw-next" aria-label="Next month">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                  </button>
+                </div>
+                <div class="bw__cal-dow">
+                  <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                </div>
+                <div class="bw__cal-grid" id="bw-cal-grid"></div>
+              </div>
+
+              <div class="bw__times" id="bw-times">
+                <p class="bw__times-prompt">Select a date to see available times</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Contact Info -->
+          <div class="bw__panel bw__panel--hidden" id="bw-panel-2">
+            <div class="bw__selected-bar" id="bw-selected-bar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <span id="bw-selected-display"></span>
+            </div>
+            <div class="bw__form">
+              <div class="bw__form-row">
+                <input class="bw__input" id="bw-name" type="text" placeholder="Full Name" autocomplete="name" />
+                <input class="bw__input" id="bw-phone" type="tel" placeholder="Phone Number" autocomplete="tel" />
+              </div>
+              <input class="bw__input" id="bw-email" type="email" placeholder="Email Address" autocomplete="email" />
+              <textarea class="bw__input bw__textarea" id="bw-notes" placeholder="Anything we should know? (square footage, pets, special instructions...)"></textarea>
+              <button class="btn btn--primary bw__submit" id="bw-confirm" type="button">Confirm Booking</button>
+              <button class="bw__back-link" id="bw-back-1" type="button">Back to calendar</button>
+            </div>
+          </div>
+
+          <!-- Panel 3: Confirmation -->
+          <div class="bw__panel bw__panel--hidden" id="bw-panel-3">
+            <div class="bw__confirm">
+              <div class="bw__confirm-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <h3 class="bw__confirm-title">You're on the schedule!</h3>
+              <p class="bw__confirm-text">We'll call to confirm your appointment within 1 hour during business hours.</p>
+              <div class="bw__confirm-detail" id="bw-confirm-detail"></div>
+              <a href="tel:706-555-0187" class="btn btn--outline bw__confirm-call">Or call us now: 706-555-0187</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -2704,6 +3169,195 @@ body {
     init();
   }
 
+})();
+
+/* ============================================
+   BOOKING WIDGET
+   ============================================ */
+(function() {
+  'use strict';
+
+  var SLOTS_WEEKDAY = ['8:00 AM','10:00 AM','12:00 PM','2:00 PM','4:00 PM'];
+  var SLOTS_SATURDAY = ['8:00 AM','10:00 AM','12:00 PM'];
+  var selectedDate = null;
+  var selectedTime = null;
+  var viewYear, viewMonth;
+
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DAYS_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  function init() {
+    var now = new Date();
+    viewYear = now.getFullYear();
+    viewMonth = now.getMonth();
+
+    renderCalendar();
+
+    document.getElementById('bw-prev').addEventListener('click', function() {
+      viewMonth--;
+      if (viewMonth < 0) { viewMonth = 11; viewYear--; }
+      renderCalendar();
+    });
+    document.getElementById('bw-next').addEventListener('click', function() {
+      viewMonth++;
+      if (viewMonth > 11) { viewMonth = 0; viewYear++; }
+      renderCalendar();
+    });
+    document.getElementById('bw-back-1').addEventListener('click', function() {
+      showPanel(1);
+    });
+    document.getElementById('bw-confirm').addEventListener('click', function() {
+      var name = document.getElementById('bw-name').value.trim();
+      var phone = document.getElementById('bw-phone').value.trim();
+      var email = document.getElementById('bw-email').value.trim();
+      if (!name || !phone) {
+        alert('Please enter your name and phone number.');
+        return;
+      }
+      submitBooking(name, phone, email, document.getElementById('bw-notes').value.trim());
+    });
+  }
+
+  function renderCalendar() {
+    document.getElementById('bw-month-label').textContent = MONTHS[viewMonth] + ' ' + viewYear;
+    var grid = document.getElementById('bw-cal-grid');
+    grid.innerHTML = '';
+
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var minDate = new Date(today);
+    minDate.setDate(minDate.getDate() + 1); // earliest = tomorrow
+    var maxDate = new Date(today);
+    maxDate.setDate(maxDate.getDate() + 60);
+
+    var firstDay = new Date(viewYear, viewMonth, 1).getDay();
+    var daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+
+    // Leading empty cells
+    for (var i = 0; i < firstDay; i++) {
+      var empty = document.createElement('div');
+      empty.className = 'bw__day bw__day--empty';
+      grid.appendChild(empty);
+    }
+
+    for (var d = 1; d <= daysInMonth; d++) {
+      var date = new Date(viewYear, viewMonth, d);
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'bw__day';
+      btn.textContent = d;
+
+      var isSunday = date.getDay() === 0;
+      var isPast = date < minDate;
+      var isFuture = date > maxDate;
+      var isToday = date.getTime() === today.getTime();
+
+      if (isSunday || isPast || isFuture) {
+        btn.disabled = true;
+        if (isPast) btn.classList.add('bw__day--past');
+      } else {
+        if (isToday) btn.classList.add('bw__day--today');
+        if (selectedDate && date.getTime() === selectedDate.getTime()) {
+          btn.classList.add('bw__day--selected');
+        }
+        btn.addEventListener('click', (function(dt) {
+          return function() { selectDate(dt); };
+        })(date));
+      }
+
+      grid.appendChild(btn);
+    }
+  }
+
+  function selectDate(date) {
+    selectedDate = date;
+    selectedTime = null;
+    renderCalendar();
+    renderTimes(date);
+  }
+
+  function renderTimes(date) {
+    var container = document.getElementById('bw-times');
+    var slots = date.getDay() === 6 ? SLOTS_SATURDAY : SLOTS_WEEKDAY;
+    var dateLabel = DAYS_SHORT[date.getDay()] + ', ' + MONTHS[date.getMonth()] + ' ' + date.getDate();
+
+    var html = '<p class="bw__times-heading">Available times for ' + dateLabel + '</p>';
+    slots.forEach(function(slot) {
+      html += '<button type="button" class="bw__time-btn" data-time="' + slot + '">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' +
+        slot + '</button>';
+    });
+
+    container.innerHTML = html;
+
+    container.querySelectorAll('.bw__time-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        container.querySelectorAll('.bw__time-btn').forEach(function(b) {
+          b.classList.remove('bw__time-btn--selected');
+        });
+        btn.classList.add('bw__time-btn--selected');
+        selectedTime = btn.dataset.time;
+        setTimeout(function() { advanceToStep2(); }, 300);
+      });
+    });
+  }
+
+  function advanceToStep2() {
+    if (!selectedDate || !selectedTime) return;
+    var dateLabel = DAYS_SHORT[selectedDate.getDay()] + ', ' + MONTHS[selectedDate.getMonth()] + ' ' + selectedDate.getDate() + ' at ' + selectedTime;
+    document.getElementById('bw-selected-display').textContent = dateLabel;
+    showPanel(2);
+  }
+
+  function submitBooking(name, phone, email, notes) {
+    var dateLabel = DAYS_SHORT[selectedDate.getDay()] + ', ' + MONTHS[selectedDate.getMonth()] + ' ' + selectedDate.getDate() + ' at ' + selectedTime;
+    document.getElementById('bw-confirm-detail').textContent = dateLabel;
+    showPanel(3);
+
+    // Fire-and-forget lead to GHL contact form
+    try {
+      var body = new URLSearchParams({
+        'formId': 'jnLVYNGsjCotORZBuyP1',
+        'location_id': 'kKNmrnyqzFtJzEE3vd6Y',
+        'first_name': name.split(' ')[0],
+        'last_name': name.split(' ').slice(1).join(' ') || '',
+        'phone': phone,
+        'email': email,
+        'message': 'Booking request: ' + dateLabel + (notes ? '. Notes: ' + notes : '') + ' (via demo site)',
+      });
+      fetch('https://backend.leadconnectorhq.com/forms/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      }).catch(function() {});
+    } catch(e) {}
+  }
+
+  function showPanel(n) {
+    [1,2,3].forEach(function(i) {
+      var panel = document.getElementById('bw-panel-' + i);
+      var ind = document.getElementById('bw-ind-' + i);
+      if (i === n) {
+        panel.classList.remove('bw__panel--hidden');
+        ind.classList.add('bw__step--active');
+        ind.classList.remove('bw__step--done');
+      } else {
+        panel.classList.add('bw__panel--hidden');
+        ind.classList.remove('bw__step--active');
+        if (i < n) {
+          ind.classList.add('bw__step--done');
+        } else {
+          ind.classList.remove('bw__step--done');
+        }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 })();
   </script>
 </body>
