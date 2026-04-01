@@ -1099,36 +1099,13 @@ p:last-child {
   resize: vertical;
 }
 
-/* GHL Embed Placeholder */
-.ghl-embed-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-  padding: var(--space-8);
-  background: linear-gradient(135deg, var(--color-off-white) 0%, var(--color-light-gray) 100%);
-  border: 3px dashed var(--color-medium-gray);
-  border-radius: var(--radius-xl);
-  text-align: center;
-}
-
-.ghl-embed-placeholder__icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: var(--space-4);
-  color: var(--color-medium-gray);
-}
-
-.ghl-embed-placeholder__title {
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  color: var(--color-dark-gray);
-  margin-bottom: var(--space-2);
-}
-
-.ghl-embed-placeholder__text {
-  color: var(--color-medium-gray);
+/* GHL Form Card -- wraps the iframe so it sits cleanly on dark backgrounds */
+.ghl-form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 /* ==========================================
@@ -1865,7 +1842,7 @@ body {
           <p class="hero__subtitle">Trusted Cleaning professionals in Calhoun, GA. Quality craftsmanship and dedicated service for every project.</p>
 
           <div class="hero__cta">
-            <a href="#contact" class="btn btn--accent btn--lg">Get a Free Quote</a>
+            <a href="#booking" class="btn btn--accent btn--lg">Get a Free Quote</a>
             <a href="tel:706-555-0187" class="btn btn--outline btn--lg">Call 706-555-0187</a>
           </div>
 
@@ -2055,7 +2032,7 @@ body {
         </div>
 
         <div class="text-center mt-8">
-          <a href="#contact" class="btn btn--primary btn--lg">Get Your Free Estimate</a>
+          <a href="#booking" class="btn btn--primary btn--lg">Get Your Free Estimate</a>
         </div>
       </div>
     </section>
@@ -2179,7 +2156,9 @@ body {
 
           <div>
             <!-- CONTACT_FORM_EMBED -->
-            <iframe src="https://api.leadconnectorhq.com/widget/form/jnLVYNGsjCotORZBuyP1?business_name=Sparkle+Clean+Co&demo_slug=sparkle-clean-co&city=Calhoun&state=GA" style="width:100%;height:600px;border:none;border-radius:8px;" id="inline-jnLVYNGsjCotORZBuyP1" data-layout='{"id":"INLINE"}' data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-name="Contact Us" data-height="600" data-form-id="jnLVYNGsjCotORZBuyP1" title="Contact Us"></iframe><script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            <div class="ghl-form-card">
+              <iframe src="https://api.leadconnectorhq.com/widget/form/jnLVYNGsjCotORZBuyP1?business_name=Sparkle+Clean+Co&demo_slug=sparkle-clean-co&city=Calhoun&state=GA" style="width:100%;height:600px;border:none;border-radius:8px;" id="inline-jnLVYNGsjCotORZBuyP1" data-layout='{"id":"INLINE"}' data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-name="Contact Us" data-height="600" data-form-id="jnLVYNGsjCotORZBuyP1" title="Contact Us"></iframe><script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            </div>
             <!-- END CONTACT_FORM_EMBED -->
           </div>
         </div>
@@ -2404,7 +2383,7 @@ body {
       </svg>
       Text
     </a>
-    <a href="#contact" class="mobile-cta-bar__btn mobile-cta-bar__btn--book">
+    <a href="#booking" class="mobile-cta-bar__btn mobile-cta-bar__btn--book">
       <svg class="mobile-cta-bar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
         <line x1="16" y1="2" x2="16" y2="6"/>
